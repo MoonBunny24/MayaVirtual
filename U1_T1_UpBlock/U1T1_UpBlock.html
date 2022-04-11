@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Barra de menú
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Agrupa funciones y herramientas relacionadas entre sí en diferentes menús. <br>
+          En Maya tenemos menús estáticos y menús variables que podemos cambiar de acuerdo con el flujo de trabajo en el que estemos trabajando con el <strong> conmutador de menús.</strong><br>
+            <video width="960" height="313" controls>
+              <source src="02_Menus.mp4" type="video/mp4">
+            </video>          
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Línea de estado
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          La línea de estado comprende un atajo a funciones de uso frecuente, así como crear y abrir archivos, deshacer y rehacer, alinear objetos, trabajar con simetría, opciones de renderizado y datos de la cuenta de Autodesk. 
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Shelf / Estante
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Agrupa en pestañas diversas herramientas de uso frecuente. <br>
+            <video width="960" height="167" controls>
+              <source src="03_Shelf.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Espacios de Trabajo
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Son distribuciones de paneles y herramientas, adecuadas a diferentes flujos de trabajo. 
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFive">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          Conmutador de Paneles
+        </button>
+      </h2>
+      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Muestra y oculta los paneles Attribute Editor, Channel Box, Modeling ToolKit, Tool Settings y Character controls<br> 
+          <img src="ConmutadorPaneles.PNG" alt="Conmutador de Paneles"><br><br>
+          <img src="CP_5.PNG" alt="Channel Box/Layer Editor"> Channel Box/Layer Editor<br>
+          <img src="CP_4.PNG" alt="Tool Settings"> Tool Settings<br>
+          <img src="CP_3.PNG" alt="Attribute Editor"> Attribute Editor<br>
+          <img src="CP_2.PNG" alt="Human IK"> Human IK<br>
+          <img src="CP_1.PNG" alt="Modeling Toolkit"> Modeling Toolkit<br>      
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
