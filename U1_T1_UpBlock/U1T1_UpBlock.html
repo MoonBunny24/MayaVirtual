@@ -1,87 +1,107 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+}
+</style>
 </head>
 <body>
 
-  <div class="accordion" id="accordionExample">
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Barra de menú
-        </button>
-      </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          Agrupa funciones y herramientas relacionadas entre sí en diferentes menús. <br>
-          En Maya tenemos menús estáticos y menús variables que podemos cambiar de acuerdo con el flujo de trabajo en el que estemos trabajando con el <strong> conmutador de menús.</strong><br>
-            <video width="960" height="313" controls>
-              <source src="02_Menus.mp4" type="video/mp4">
-            </video>          
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingTwo">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Línea de estado
-        </button>
-      </h2>
-      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          La línea de estado comprende un atajo a funciones de uso frecuente, así como crear y abrir archivos, deshacer y rehacer, alinear objetos, trabajar con simetría, opciones de renderizado y datos de la cuenta de Autodesk. 
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingThree">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Shelf / Estante
-        </button>
-      </h2>
-      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          Agrupa en pestañas diversas herramientas de uso frecuente. <br>
-            <video width="960" height="167" controls>
-              <source src="03_Shelf.mp4" type="video/mp4">
-            </video>
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingFour">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-          Espacios de Trabajo
-        </button>
-      </h2>
-      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          Son distribuciones de paneles y herramientas, adecuadas a diferentes flujos de trabajo. 
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id="headingFive">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-          Conmutador de Paneles
-        </button>
-      </h2>
-      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          Muestra y oculta los paneles Attribute Editor, Channel Box, Modeling ToolKit, Tool Settings y Character controls<br> 
-          <img src="ConmutadorPaneles.PNG" alt="Conmutador de Paneles"><br><br>
-          <img src="CP_5.PNG" alt="Channel Box/Layer Editor"> Channel Box/Layer Editor<br>
-          <img src="CP_4.PNG" alt="Tool Settings"> Tool Settings<br>
-          <img src="CP_3.PNG" alt="Attribute Editor"> Attribute Editor<br>
-          <img src="CP_2.PNG" alt="Human IK"> Human IK<br>
-          <img src="CP_1.PNG" alt="Modeling Toolkit"> Modeling Toolkit<br>      
-        </div>
-      </div>
-    </div>
-  </div>
+<button class="accordion">Barra de menú</button>
+<div class="panel">
+  <p>Agrupa funciones y herramientas relacionadas entre sí en diferentes menú<br>
+    En Maya tenemos menús estáticos y menús variables que podemos cambiar de acuerdo con el flujo de trabajo en el que estemos trabajando con el <strong>conmutador de menús.</strong></p>
+    <video width="960" height="313" controls>
+      <source src="02_Menus.mp4" type="video/mp4">
+    </video>
+    
+</div>
+
+<button class="accordion">Línea de estado</button>
+<div class="panel">
+  <p>La línea de estado comprende un atajo a funciones de uso frecuente, así como crear y abrir archivos, deshacer y rehacer, alinear objetos, trabajar con simetría, opciones de renderizado y datos de la cuenta de Autodesk.</p>
+</div>
+
+<button class="accordion">Shelf / Estante</button>
+<div class="panel">
+  <p>Agrupa en pestañas diversas herramientas de uso frecuente.</p>
+</div>
+
+<button class="accordion">Espacios de Trabajo</button>
+<div class="panel">
+  <p>Son distribuciones de paneles y herramientas, adecuadas a diferentes flujos de trabajo.</p>
+</div>
+
+<button class="accordion">Conmutador de Paneles</button>
+<div class="panel">
+  <p>Muestra y oculta los paneles Attribute Editor, Channel Box, Modeling ToolKit, Tool Settings y Character controls</p>
+  <img src="ConmutadorPaneles.PNG" alt="Conmutador de Paneles">
+  <ul style="list-style-type: none;">
+    <li><img src="CP_5.PNG" alt="img1"> Channel Box/Layer Editor</li>
+    <li><img src="CP_4.PNG" alt="img1"> Tool Settings</li>
+    <li><img src="CP_3.PNG" alt="img1"> Attribute Editor</li>
+    <li><img src="CP_2.PNG" alt="img1"> Human IK</li>
+    <li><img src="CP_1.PNG" alt="img1"> Modeling Toolkit</li>
+  </ul>
+</div>
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
 
 </body>
 </html>
